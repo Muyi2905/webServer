@@ -3,9 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Simple Form</title>
 </head>
 <body>
-    
+    <div style="max-width: 400px; margin: 40px auto; padding: 20px; background-color: #fff; border: 1px solid #ddd; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+        <h2 style="text-align: center; color: #333;">Simple Form</h2>
+        <form>
+            <label style="display: block; margin-bottom: 10px;" for="name">Name:</label>
+            <input type="text" id="name" name="name" style="width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px;"><br><br>
+            <label style="display: block; margin-bottom: 10px;" for="email">Email:</label>
+            <input type="email" id="email" name="email" style="width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px;"><br><br>
+            <label style="display: block; margin-bottom: 10px;" for="message">Message:</label>
+            <textarea id="message" name="message" style="width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px;"></textarea><br><br>
+            <input type="submit" value="Submit" style="background-color: #4CAF50; color: #fff; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
+        </form>
+    </div>
 </body>
 </html>
