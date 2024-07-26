@@ -23,8 +23,12 @@ func formHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	fmt.Fprintf(w, "Post Succesfful")
+name:= r.FormValue("name")
+email:=r.FormValue("email")
 
-	
+fmt.Fprintf(w, "The name is : %v\n", name)
+fmt.Fprintf(w, "the email is: %v\n", email)
+
 }
 
 func main() {
