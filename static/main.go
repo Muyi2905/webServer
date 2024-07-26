@@ -2,31 +2,35 @@ package main
 
 import (
 	"fmt"
-	"net/http"
 	"log"
+	"net/http"
 )
 
-func helloHandler(w http.ResponseWriter, r *http.Request){
-	if r.URL.Path != "/hello"{
-		http.Error(w, "404 not found",  http.StatusAccepted)
+func hellohandler(w http.ResponseWriter, r *http.Request) {
+	if r.URL.Path != "/hello" {
+		http.Error(w, "404 error not found", http.StatusNotFound)
+		return
 	}
-
-	if r.Method != "GET"{
-		http.Error(w, "Method is not supported", http.StatusAccepted)
-	
-
-fmt.Fprintf(w, "hello")
+	if r.Method != "GET" {
+		http.Error(w, "Method not found", http.StatusNotFound)
+		return
 	}
 }
 
-func main(){
-	fileServer:= http.FileServer(http.Dir("/static"))
-	http.Handle("/", fileServer)
-	http.HandleFunc("/hello", helloHandler)
+func formHandler(w http.ResponseWriter, r *http.Request){
+if err:= 
+}
+
+func main() {
+
+	server := http.FileServer(http.Dir("/static"))
+	fmt.Printf("server is running on port 8080\n")
+	http.Handle("/", server)
+	http.HandleFunc("/hello", hellohandler)
 	http.HandleFunc("/form", formHandler)
 
-	if err:=http.ListenAndServe(":8080", nil);err!= nil {
+	if err := http.ListenAndServe(":8080", nil); err != nil {
 		log.Fatal(err)
 	}
-	
+
 }
