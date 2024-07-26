@@ -22,6 +22,9 @@ func formHandler(w http.ResponseWriter, r *http.Request) {
 		fmt.Fprintf(w, "error:%v", err)
 		return
 	}
+	fmt.Fprintf(w, "Post Succesfful")
+
+	
 }
 
 func main() {
